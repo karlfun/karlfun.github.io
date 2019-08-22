@@ -44,8 +44,7 @@ ul.posts li {
 
 
 li.front{
-    font-weight:bold;
-    font-size:2em;
+    font-size:1.5em;
     line-height:3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
