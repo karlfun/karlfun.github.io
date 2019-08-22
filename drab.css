@@ -41,3 +41,10 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+
+li.front{
+    font-weight:bold;
+    font-size:1.5em;
+    line-height:3em;
+}
