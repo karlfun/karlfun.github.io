@@ -13,13 +13,14 @@ body {
 
 @media (min-width: 400px) {
   .one-column { width: 90%; font-size: 75%; } 
-    .onethird{float:none;clear:both;}  
+    .onethird{float:none;clear:both;} /*--onethird--*/
 }
 @media (min-width: 700px) {
   .one-column { width: 80%; font-size: 90%; }
 }
 @media (min-width: 850px) {
   .one-column { width: 70%; font-size: 100%; }
+    .onethird{float:left;} /*--onethird--*/
 }
 @media (min-width: 1000px) {
   .one-column { width: 60%; font-size: 110%; }
