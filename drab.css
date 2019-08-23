@@ -12,7 +12,8 @@ body {
 
 
 @media (min-width: 400px) {
-  .one-column { width: 90%; font-size: 75%; }
+  .one-column { width: 90%; font-size: 75%; } 
+    .onethird{float:none;clear:both;}  
 }
 @media (min-width: 700px) {
   .one-column { width: 80%; font-size: 90%; }
@@ -86,4 +87,5 @@ li, li li{
     width:24%;
     float:left;
     margin-right:2em;
+    min-width:160px;
 }
