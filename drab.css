@@ -80,3 +80,9 @@ li.front{
     line-height:3rem;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
 }
+
+
+.onethird{
+    width:28%;
+    float:left;
+}
