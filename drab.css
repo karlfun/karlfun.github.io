@@ -75,7 +75,7 @@ ul.posts li {
 }
 
 
-li.front{
+li{
     font-size:1.5rem;
     line-height:3rem;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -83,6 +83,7 @@ li.front{
 
 
 .onethird{
-    width:28%;
+    width:24%;
     float:left;
+    margin-right:2em;
 }
