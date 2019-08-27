@@ -77,11 +77,11 @@ ul.posts li {
 }
 
 
-li, li li{
+html, body, div, strong, p, footer, li, li li{
     font-size:1rem;
     line-height:2rem;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
+}/*--Make sure all fonts resize together and we don't get recursive resizing (2em x 2em or 1em of 1em etc)--*/
 
 
 .onethird{
