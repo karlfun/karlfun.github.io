@@ -77,7 +77,7 @@ ul.posts li {
 }
 
 
-html, body, div, strong, p, footer, li, li li{
+p, li, li li{
     font-size:1rem;
     line-height:2rem;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
