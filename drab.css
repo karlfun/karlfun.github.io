@@ -94,3 +94,8 @@ li, li li{
 footer p{
     color:#d5d5d5;
 }
+
+.nowrap {
+  white-space: nowrap;
+  word-break: keep-all;
+}
