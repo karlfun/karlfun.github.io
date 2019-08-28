@@ -12,7 +12,7 @@ title: Current Website stats
 * Conversely, 19% of the traffic is to PDF content, and this is using 87% of the bandwidth 
 * One file, the Child Welfare Task Force Committee Report, was responsible for 3 GB of the bandwidth used, with 1,402 downloads
 * Site visits:
-  * 28,831 of the site visits to the website come from a direct link (bookmark or email), about 91%
+  * 28,831 of the 39,000 total site visits to the website come from a direct link (bookmark or email)
   * 3,571 of the visits come from Google searches
   * 2,658 of the site visits come from Facebook
   * The next highest amount is 576, from a legislator's campaign site
