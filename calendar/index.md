@@ -9,7 +9,7 @@ title: Publications Calendar
 | Publication Name | Approx. Publish Date | Number of pages | Primary audience | Print or Digital Preference | 
 | --- | --- | :---: | --- | --- |
 | Briefing Book | November | 175 pages | | | 
-| Budget Analysis (BA) | | | |  |
+| Budget Analysis (BA) | | 300 pages | |  |
 | Preliminary BA Summaries | | | |  |
 | BA Summaries | | | | |
 | Interim Committee Reports (ICR) | January | 200 pages |  | |
