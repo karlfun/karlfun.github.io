@@ -9,12 +9,12 @@ title: Publications Calendar
 
 | Publication Name | Approx. Publish Date | Number of pages | Primary audience | Print or Digital Preference | 
 | --- | --- | :---: | --- | --- |
-| Briefing Book | | 175 pages | | | 
+| Briefing Book | November | 175 pages | | | 
 | Budget Analysis (BA) | | | |  |
 | Preliminary BA Summaries | | | |  |
 | BA Summaries | | | | |
-| Interim Committee Reports (ICR) | | | 200 pages | |
-| ICR Supplement | | | 100 pages | |
+| Interim Committee Reports (ICR) | January | 200 pages |  | |
+| ICR Supplement | February | 100 pages |  | |
 | Tax Facts | | | | |
 | Staff Directory | | | |  Print |
 | Subject Index update | | | KLRD internal | Need to poll KLRD |
@@ -23,7 +23,7 @@ title: Publications Calendar
 | Subcommittee Reports | | || |
 | Omnibus Memo | | | | |
 | Highlights | | 11 pages | | Digital | 
-| Summary of Legislation | | | 163 pages | |
+| Summary of Legislation | | 163 pages |  | |
 | Fiscal Facts | | | | |
 | Appropriations Report | | | | | 
 | Joint Committee on State Building Construction Report | | | | |
