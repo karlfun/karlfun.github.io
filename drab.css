@@ -103,6 +103,7 @@ footer p{
 
 table{
     border-collapse:collapse;
+    margin-bottom:1.5em;
 }
 table, th, td{
     border: 1px solid #d5d5d5;
