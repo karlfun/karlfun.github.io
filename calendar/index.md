@@ -8,7 +8,7 @@ title: Publications Calendar
 **List of publications and their amount of pages**
 
 | Publication Name | Approx. Publish Date | Number of pages | Primary audience |
-| --- | --- | --- |
+| --- | --- | :---: | --- |
 | Briefing Book | | 175 pages | | 
 | Budget Analysis (BA) | | | | 
 | Preliminary BA Summaries | | | | 
