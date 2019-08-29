@@ -5,8 +5,7 @@ title: Publications Calendar
 
 # Current Publications cycle
 
-**List of publications and their amount of pages**
-
+| **List of publications and their amount of pages** |
 | Publication Name | Approx. Publish Date | Number of pages | Primary audience | Print or Digital Preference | 
 | --- | --- | :---: | --- | --- |
 | Briefing Book | November | 175 pages | | | 
