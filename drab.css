@@ -112,6 +112,6 @@ table, th, td{
     padding:1.5em;
 }
 
-tr:nth-child(odd) {
+tr:nth-child(even) {
     background-color: #d5d5d5;
 }
