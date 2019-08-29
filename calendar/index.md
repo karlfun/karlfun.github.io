@@ -28,5 +28,6 @@ title: Publications Calendar
 | Appropriations Report | | | | | 
 | Joint Committee on State Building Construction Report | | | | |
 | Joint Committee on Administrative Rules and Regulations Report | | | | |
+| *totals* | | 0000 pages | | 00 print, 00 digital |
 
 
