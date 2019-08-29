@@ -13,8 +13,8 @@ title: Publications Calendar
 | Budget Analysis (BA) | | | |  |
 | Preliminary BA Summaries | | | |  |
 | BA Summaries | | | | |
-| Interim Committee Reports (ICR) | | | |  |
-| ICR Supplement | | | | |
+| Interim Committee Reports (ICR) | | | 200 pages | |
+| ICR Supplement | | | 100 pages | |
 | Tax Facts | | | | |
 | Staff Directory | | | |  Print |
 | Subject Index update | | | KLRD internal | Need to poll KLRD |
@@ -23,7 +23,7 @@ title: Publications Calendar
 | Subcommittee Reports | | || |
 | Omnibus Memo | | | | |
 | Highlights | | 11 pages | | Digital | 
-| Summary of Legislation | | | | |
+| Summary of Legislation | | | 163 pages | |
 | Fiscal Facts | | | | |
 | Appropriations Report | | | | | 
 | Joint Committee on State Building Construction Report | | | | |
