@@ -61,6 +61,8 @@ p {
     font-size: 1rem;
     line-height: 1.3rem;
     color: #333;
+    widows: 3; 
+    orphans: 3;
 }
 footer {
     border-top: 1px solid #d5d5d5;
