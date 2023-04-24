@@ -459,15 +459,21 @@ function blockstyle(value) {
 }
 
 
-window.$fxhashFeatures = {
-  "first palette": random_second_palette.name,
-  "second palette": randomPalette.name,
-  "background color": random_bg_color,
-  "blur color": randomblurcolor,
-  "block style": blockstyle(randomsize)
+  
+function go(val){
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.font = "bold 2em Arial";
+ctx.fillStyle = "black";
+ctx.textAlign = "center";
+ctx.fillText(val,canvas.width/2, canvas.height/2);
+ctx.shadowColor = "white";
+ctx.shadowBlur = 3;
+ctx.shadowOffsetX = 2;
+ctx.shadowOffsetY = 2;
 }
-
-// fxpreview();
+  
+  
 
 </script>
 </body>
