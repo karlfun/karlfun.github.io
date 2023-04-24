@@ -13,8 +13,7 @@
 <body>
 
 <div id="inputbox">  
-  Give a quote :<input type="text" id="val"><br>  
-  <button onclick="go(val.value)">Press button...</button>
+  Give a quote: <input type="text" id="val"><button onclick="go(val.value)">Go!</button>
 </div>  
   
 <canvas id="gocanvas"></canvas>
@@ -463,12 +462,12 @@ function blockstyle(value) {
 
   
 function go(val){
-var dacanvas = document.getElementById("gocanvas");
-var goctx = dacanvas.getContext("2d");
-goctx.font = "bold 3em Arial";
-goctx.fillStyle = "black";
-goctx.textAlign = "center";
-goctx.fillText(val,canvas.width/2, canvas.height/2);
+  var dacanvas = document.getElementById("gocanvas");
+  var goctx = dacanvas.getContext("2d");
+  goctx.font = "bold 3em Arial";
+  goctx.fillStyle = "black";
+  goctx.textAlign = "center";
+  goctx.fillText(val,canvas.width/2, canvas.height/2);
 }
   
   
