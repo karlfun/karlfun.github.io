@@ -292,6 +292,8 @@ leftside();
 // setting variables outside the loop
 // for both the sine wave circles (line widths)
 // and the texture on top (radius)
+// this is important for when the whole canvas gets scaled differently
+
 var hh = h * 100;
 
 if (hh < 150000) {
@@ -461,16 +463,12 @@ function blockstyle(value) {
 
   
 function go(val){
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-ctx.font = "bold 2em Arial";
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.fillText(val,canvas.width/2, canvas.height/2);
-ctx.shadowColor = "white";
-ctx.shadowBlur = 3;
-ctx.shadowOffsetX = 2;
-ctx.shadowOffsetY = 2;
+var dacanvas = document.getElementById("gocanvas");
+var goctx = dacanvas.getContext("2d");
+goctx.font = "bold 3em Arial";
+goctx.fillStyle = "black";
+goctx.textAlign = "center";
+goctx.fillText(val,canvas.width/2, canvas.height/2);
 }
   
   
