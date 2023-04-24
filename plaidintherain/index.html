@@ -1,0 +1,464 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Plaid in the Rain by nuflark</title>
+
+</head>
+
+<body>
+<canvas id="gocanvas"></canvas>
+
+<script>
+
+// "Plaid in the Rain"
+
+var cb = document.getElementById("gocanvas");
+
+// let the user size the canvas
+// based on code from landlinesart
+// default will be based on window size
+// but keep it vert
+
+  let user_size = new URLSearchParams(window.location.search).get('size');
+  let size = window.innerHeight;
+  if ((user_size !== undefined) && (user_size !== null)) {
+    size = parseInt(user_size);
+  }
+
+cb.setAttribute("width", size * 0.66);
+cb.setAttribute("height", size);
+
+
+// set up some variables based on size
+// this still works if the canvas is doubled
+var w = cb.width;
+var h = cb.height;
+
+
+
+
+
+
+
+// color setup
+//////////////////////
+
+const PALETTES = [
+  {
+    name: "football jersey", // yellow orange, orange, blue
+    colors: ["#FFC200", "#FFA000", "#05A5FF"] //"#00FFFF" sky blue, 
+  },
+  {
+    name: "blooming iris", // grey-purple, pink, seafoam, purple
+    colors: ["#6E5270", "#E968F2", "#52A6A8", "#680070"] //"#EBAFF0",
+  },
+  {
+    name: "neapolitan", // sky blue, chamomile yellow, pink, magenta
+    colors: ["#81D3DE", "#DED06A", "#DE549B", "#913F69"]
+  },
+  {
+    name: "adhesive compounds", // orange, yellow, pink
+    colors: ["#E09F3F", "#F0CD28", "#C74A79"] // 
+  },
+  {
+    name: "daily doodle", // yellow, orange, purple, pink
+    colors: ["#FFF200", "#F7941D", "#A7228E", "#4C3390"]
+  },
+  {
+    name: "bruised apple", // teal, green, purple, pink
+    colors: ["#33cccc", "#33cc99", "#6666cc", "#ff3399"]
+  },
+  {
+    name: "friendship", // yellow, pink, purple
+    colors: ["#EBC710", "#F28D0C", "#F20CBF", "#5E05EB"] //#DB2601
+  },
+  {
+    name: "ocean whale", // bright blue, light blue, dark blue, grey blue
+    colors: ["#68BDF2", "#AFD7F0", "#004570", "#8AA9BD"]
+  },
+  {
+    name: "spiffy socks", // green, purple, red-purple, pink
+    colors: ["#cce335", "#A09CF0", "#A3528E", "#F084D4"] //#7572A3
+  }
+];
+
+// Random helper functions
+// random number between a and b
+function rn(a, b) {
+  return a + (b - a) * Math.random();
+}
+// random integer between a (inclusive) and b (inclusive)
+// requires a < b for proper probability distribution
+function ri(a, b) {
+  return Math.floor(rn(a, b + 1));
+}
+
+// Select a palette
+const paletteIndex = Math.floor(Math.random() * (0, PALETTES.length - 1));
+const randomPalette = PALETTES[paletteIndex];
+console.log(`the first palette is ${randomPalette.name}`);
+
+const palette_second_index = Math.floor(
+  Math.random() * (0, PALETTES.length - 1)
+);
+const random_second_palette = PALETTES[palette_second_index];
+console.log(`the second palette is ${random_second_palette.name}`);
+
+
+// background changer
+// attach the background to the canvas
+// so it downloads with the PNG
+////////////////////////////////////////
+
+var background_color = ["black", "khaki", "indigo", "indigo"]; // khaki
+
+var random_bg_color =
+  background_color[Math.floor(Math.random() * background_color.length)];
+console.log(`the background color is ${random_bg_color}`);
+
+var bgcontext = cb.getContext("2d");
+bgcontext.globalCompositeOperation = "source-over";
+bgcontext.fillStyle = random_bg_color;
+bgcontext.fillRect(0, 0, cb.width, cb.height);
+
+
+
+
+
+// instead of radar, we have the sun
+////////////////////////////////////
+
+
+var blurcolors = ["DarkTurquoise", "DeepPink", "gold", "none"]; // , "indigo", "none"
+
+var randomblurcolor =
+  blurcolors[Math.floor(Math.random() * blurcolors.length)];
+console.log(`the blur color is ${randomblurcolor}`);
+
+
+var yar = Math.random()*(h*0.6) + (h*0.15);  
+
+function sun() {
+
+var ctx = cb.getContext("2d")  
+  
+
+
+for (let e = 0; e < 200; e++){
+
+    var x = 0;
+    // var y = h/6 + Math.random()*h;
+  //  var y = yar + Math.random()*(h/6); 
+   var y = yar + Math.random()*(h/6);
+    // var y = Math.random()*h + (Math.random()*(h/7));
+      
+    ctx.beginPath();
+      ctx.arc(x+ e*15, y, h/4, 0, 2 * Math.PI)
+      ctx.closePath();
+
+  //ctx.lineWidth = 0.6; // lrrr
+  ctx.globalAlpha = 0.05; 
+    ctx.fillStyle = randomblurcolor; // white, gold, DarkTurquoise, DeepPink
+   ctx.fill();
+  }
+
+}
+
+sun();
+
+
+
+
+
+
+
+
+
+  var blocksizes = [
+  h*0.028,
+  h*0.093
+   ];
+
+  var randomsize = blocksizes[Math.floor(Math.random()*blocksizes.length)]; 
+
+
+if (randomsize === h*0.028) {
+console.log(`the block style is clean`)
+} else {
+  console.log(`the block style is cloudy`)
+}
+
+
+
+function rightside() {
+  // lines loop
+  // Y
+  for (let jbb = 0; jbb < 19; jbb++) {
+    var random_next_color =
+      randomPalette.colors[
+        Math.floor(Math.random() * randomPalette.colors.length)
+      ];
+
+    // points loop
+    // X
+    for (let ibb = 0; ibb < 80; ibb++) {
+      var xbb = 0;
+      // starting y point + (j * space between each repeated  line)
+      //var ybb = h-h/2 + jbb * 8;
+      var ybb = w/2 + jbb * 8;
+
+      var pbb = Math.sin(Math.random(ibb, jbb));
+
+      const rbcontext = cb.getContext("2d");
+
+      rbcontext.beginPath();
+      //rbcontext.rect(h/2.1 + ybb * pbb, (h*0.028 + xbb) * ibb, h*0.2, h*0.08); // 179, 80
+      rbcontext.rect(h/2.1 + ybb * pbb, (h*0.032 + xbb) * ibb, h*0.2, randomsize); // 179, 80
+      rbcontext.globalAlpha = 0.4;
+      rbcontext.fillStyle = random_next_color;
+      rbcontext.fill();
+    }
+  }
+}
+rightside();
+
+
+
+
+
+
+function leftside() {
+  // lines loop
+  // Y
+  for (let jbb = 0; jbb < 19; jbb++) {
+    var random_right_color =
+      random_second_palette.colors[
+        Math.floor(Math.random() * random_second_palette.colors.length)
+      ];
+
+    // points loop
+    // X
+    for (let ibb = 0; ibb < 110; ibb++) {
+      var xbb = 0;
+      // starting y point + (j * space between each repeated  line)
+      var ybb = h/2.1 + jbb * 8;
+
+      var pbb = Math.sin(Math.random(ibb, jbb));
+
+      const rbcontext = cb.getContext("2d");
+
+      rbcontext.beginPath();
+      //rbcontext.rect(ybb * pbb, (h*0.028 + xbb) * ibb, h*0.2, h*0.08); // 191, 80
+      rbcontext.rect(ybb * pbb, (h*0.032 + xbb) * ibb, h*0.2, randomsize); // 191, 80
+      rbcontext.globalAlpha = 0.1;
+      rbcontext.fillStyle = random_right_color;
+      rbcontext.fill();
+    }
+  }
+}
+
+leftside();
+
+
+////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// setting variables outside the loop
+// for both the sine wave circles (line widths)
+// and the texture on top (radius)
+var hh = h * 100;
+
+if (hh < 150000) {
+  var max = hh;
+  var cirr = 0.6;
+  var lrrr = 0.6;
+} else {
+  var max = 100000;
+  var cirr = 2.25;
+  var lrrr = 1.5;
+}
+
+
+
+
+/////////////////////
+
+function bigcirc() {
+  // lines loop
+  // Y
+
+  // triple loop
+  // 1 to 5 seems good
+  // how many sets of circles
+ // for (let e = 0; e < 1; e++) {
+    // how many circles
+    for (let jbb = 0; jbb < 2; jbb++) {
+      var random_right_color =
+        random_second_palette.colors[
+          Math.floor(Math.random() * random_second_palette.colors.length)
+        ];
+
+      // points loop
+      // X
+      for (let ibb = 0; ibb < 1; ibb++) {
+        var xbb = 0;
+        // starting y point + (j * space between each repeated  line)
+        
+        var ybb = h/2 + jbb * 8;
+
+        var pbb = Math.sin(Math.random(ibb, jbb));
+
+        var r = Math.random() * h/3 + h/5;
+
+        const rbcontext = cb.getContext("2d");
+
+        rbcontext.beginPath();
+        rbcontext.arc(ybb * pbb, (h/5 + xbb) * ibb + h/2, r, 0, 2 * Math.PI);
+        rbcontext.globalAlpha = 0.11;
+        rbcontext.fillStyle = "white";
+        //rbcontext.globalCompositeOperation = "source-over";
+        rbcontext.fill();
+        rbcontext.closePath();
+        //rbcontext.clip();
+      }
+    }
+ // }
+}
+
+bigcirc();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// a sine wave of big circles
+// to give it the 'plotted' effect
+////////////////////////////////////
+
+var space = lrrr*20;
+var amp = lrrr*100;
+var freq = lrrr*100 + lrrr*100;
+
+
+function plotSine() {
+for (let e = 0; e <1; e++){
+  var width = cb.width;
+  var height = cb.height;
+
+  var ctx = cb.getContext("2d");
+
+  for (let x = 0; x < 1; x++) {
+    var y = 0;
+    var amplitude = amp; // 40 or 250
+    var frequency = freq; // 70 or 350
+
+    var g = Math.floor((Math.random() * h - (h/6)) - h/3);
+    var r = (Math.random() * h - (h/8)) + h/2;
+    //var g = Math.random()*h/2 + h/4;
+    //var r = Math.random()*h/2 + h/2;
+    
+    ctx.beginPath();
+
+    while (x < (h/2) ) { // h/5
+      y = h / 2 + amplitude * Math.sin(x / frequency);
+      ctx.moveTo(x + r + g, y + g);
+      ctx.arc(x + g, y + g, r, 0, 2 * Math.PI);
+      //x = x + 10; // 10
+      x = x + space;
+      ctx.closePath();
+    }
+
+    ctx.lineWidth = lrrr;
+    ctx.globalAlpha = 0.35; // 0.35
+    ctx.strokeStyle = "white";
+    ctx.stroke();
+    //ctx.fillStyle = "white";
+    //ctx.fill();
+  }
+}
+}
+
+plotSine();
+
+
+
+
+
+
+
+// texture on top
+////////////////////
+function smallcirc() {
+  // lines loop
+  // Y
+  for (let jbb = 0; jbb < 1; jbb++) {
+    // points loop
+    // X
+    var max = h *100;
+    
+    for (let ibb = 0; ibb < max; ibb++) {
+ 
+      var x = Math.random() * w;
+      var y = Math.random() * h;
+      const rbcontext = cb.getContext("2d");
+
+      rbcontext.beginPath();
+      rbcontext.arc(x, y, lrrr, 0, 2 * Math.PI);
+      rbcontext.globalAlpha = 0.2;
+      rbcontext.fillStyle = "grey";
+      rbcontext.fill();
+    }
+  }
+}
+
+smallcirc();
+
+
+
+function blockstyle(value) {
+  if (value === h*0.028) return "clean"
+  else return "cloudy"
+}
+
+
+window.$fxhashFeatures = {
+  "first palette": random_second_palette.name,
+  "second palette": randomPalette.name,
+  "background color": random_bg_color,
+  "blur color": randomblurcolor,
+  "block style": blockstyle(randomsize)
+}
+
+// fxpreview();
+
+</script>
+</body>
+</html>
