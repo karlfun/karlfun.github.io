@@ -3,10 +3,20 @@
 <html>
 <head>
 <title>Plaid in the Rain by nuflark</title>
-
+  <style>
+    #inputbox{
+      margin:2em;
+    }
+  </style>
 </head>
 
 <body>
+
+<div id="inputbox">  
+  Give a quote :<input type="text" id="val"><br>  
+  <button onclick="go(val.value)">Press button...</button>
+</div>  
+  
 <canvas id="gocanvas"></canvas>
 
 <script>
